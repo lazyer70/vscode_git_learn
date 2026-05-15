@@ -22,4 +22,10 @@ public class SystemController : ControllerBase
     {
         return Ok("healthy");
     }
+
+    [HttpGet("version")]
+    public IActionResult GetVersion()
+    {
+        return Ok(new { version = "V0.3" });
+    }
 }
